@@ -1,65 +1,96 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { products } from "@/lib/products";
+import { Hero } from "@/components/home/Hero";
+import { CategoryTiles } from "@/components/home/CategoryTiles";
+import { FeaturedCollection } from "@/components/home/FeaturedCollection";
+import { StatementCorners } from "@/components/home/StatementCorners";
+import { LimitedBatchBanner } from "@/components/home/LimitedBatchBanner";
+import { BrandStorySection } from "@/components/home/BrandStorySection";
+import { NewsletterSection } from "@/components/home/NewsletterSection";
+import { InstagramGallery } from "@/components/home/InstagramGallery";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title:
+    "Maison Retro | Retro-Inspired Decor & Statement Pieces",
+  description:
+    "Discover colorful, retro-inspired decor and unique statement pieces with personality. Limited finds, playful design, and curated objects for standout spaces. Boutique home decor at maisonretro.shop.",
+  keywords: [
+    "retro home decor",
+    "colorful home decor",
+    "statement decor pieces",
+    "unique decor objects",
+    "boutique home decor",
+    "cute retro decor",
+    "playful luxury home decor",
+  ],
+  openGraph: {
+    title: "Maison Retro | Retro-Inspired Decor & Statement Pieces",
+    description:
+      "Limited finds, playful design, and curated decor for homes with personality.",
+    url: "https://maisonretro.shop",
+    siteName: "Maison Retro",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+export default function HomePage() {
+  const sortedNew = [...products].sort(
+    (a, b) =>
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+  );
+  const newArrivals =
+    products.filter((p) => p.isNew).length > 0
+      ? products
+          .filter((p) => p.isNew)
+          .sort(
+            (a, b) =>
+              new Date(b.createdAt).getTime() -
+              new Date(a.createdAt).getTime(),
+          )
+          .slice(0, 3)
+      : sortedNew.slice(0, 3);
+  const bestSellers = products.filter((p) => p.isBestSeller).slice(0, 3);
+  const favorites = products
+    .filter((p) => p.isBestSeller || p.isNew)
+    .slice(0, 6);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <Hero />
+      <FeaturedCollection
+        id="new-arrivals"
+        title="New arrivals"
+        subtitle="Fresh drops—limited runs and restocks worth the refresh."
+        products={newArrivals}
+        href="/shop?filter=new"
+        ctaLabel="Shop new"
+        tone="surface"
+      />
+      <FeaturedCollection
+        id="best-sellers"
+        title="Best sellers"
+        subtitle="The pieces everyone’s styling first."
+        products={bestSellers.length ? bestSellers : sortedNew.slice(0, 3)}
+        href="/shop?filter=bestseller"
+        ctaLabel="See best sellers"
+        tone="cream"
+      />
+      <CategoryTiles />
+      <StatementCorners />
+      <LimitedBatchBanner />
+      <BrandStorySection />
+      <FeaturedCollection
+        id="customer-favorites"
+        title="Customer favorites"
+        subtitle="Curated objects for playful interiors."
+        products={favorites}
+        href="/shop"
+        ctaLabel="Shop all"
+        tone="surface"
+      />
+      <InstagramGallery />
+      <NewsletterSection />
+    </>
   );
 }
