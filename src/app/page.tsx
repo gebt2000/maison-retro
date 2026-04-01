@@ -63,7 +63,7 @@ export default function HomePage() {
       <FeaturedCollection
         id="new-arrivals"
         title="New arrivals"
-        subtitle="Fresh drops—limited runs and restocks worth the refresh."
+        subtitle="Fresh drops, limited runs, and restocks worth the refresh."
         products={newArrivals}
         href="/shop?filter=new"
         ctaLabel="Shop new"

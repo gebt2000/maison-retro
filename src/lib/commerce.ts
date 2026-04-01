@@ -1,5 +1,5 @@
 /**
- * Commerce adapter boundary — swap `getProducts` / cart / checkout
+ * Commerce adapter boundary. Swap `getProducts` / cart / checkout
  * implementations for production:
  * - Shopify Storefront API + cart mutations
  * - Medusa JS client

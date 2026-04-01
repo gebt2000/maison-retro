@@ -63,7 +63,7 @@ export function SearchOverlay() {
             )}
             {q.trim().length >= 2 && results.length === 0 && (
               <p className="px-4 py-8 text-center text-sm text-ink-muted">
-                No matches—try another keyword.
+                No matches. Try another keyword.
               </p>
             )}
             <ul className="space-y-1">
@@ -88,7 +88,7 @@ export function SearchOverlay() {
                     <div className="min-w-0 flex-1">
                       <p className="font-medium text-ink">{p.name}</p>
                       <p className="text-xs text-ink-muted">
-                        {CATEGORY_LABELS[p.category]} · {formatPrice(p.price)}
+                        {CATEGORY_LABELS[p.category]}, {formatPrice(p.price)}
                       </p>
                     </div>
                   </Link>

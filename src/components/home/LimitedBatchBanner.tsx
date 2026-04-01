@@ -30,7 +30,7 @@ export function LimitedBatchBanner() {
             <span className="italic text-tangerine">Neither should you.</span>
           </h2>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-cream/70">
-            When a run is gone, it’s gone—new color stories land often.
+            When a run is gone, it’s gone. New color stories land often.
           </p>
         </motion.div>
         <motion.div

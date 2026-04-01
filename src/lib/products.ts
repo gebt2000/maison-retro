@@ -35,7 +35,7 @@ export const products: Product[] = [
     isNew: true,
     isBestSeller: true,
     shortDescription:
-      "Two collectible character lights—frosted globe heads, bubbly bodies, hands-in-pockets attitude.",
+      "Two collectible character lights. Frosted globe heads, bubbly bodies, hands-in-pockets attitude.",
     description:
       "A pair of sculptural table lamps that read like designer toys. Warm diffused light from each frosted globe; matte ceramic-style bodies in complementary palettes (sky & cherry, lavender & blush). Statement pieces for nightstands, shelves, or anywhere you want personality and glow.",
     images: [img("lumi-pal-buddy-lamps.png")],
@@ -57,9 +57,9 @@ export const products: Product[] = [
     isNew: true,
     isBestSeller: true,
     shortDescription:
-      "Frosted coupe bowls, squiggle stems, and a cheeky glass “garnish” on the rim—set of two.",
+      "Frosted coupe bowls, squiggle stems, and a cheeky glass “garnish” on the rim. Set of two.",
     description:
-      "Memphis-meets-cocktail-hour. One glass in soft pink with a red wiggle stem and cherry bead; one in lavender with sage stem and olive accent. Frosted bowls, glossy stems—designed for dopamine decor and actual sipping.",
+      "Memphis meets cocktail hour. One glass in soft pink with a red wiggle stem and cherry bead; one in lavender with sage stem and olive accent. Frosted bowls, glossy stems, built for dopamine decor and actual sipping.",
     images: [img("wiggle-coupe-duo.png")],
     looksGreatWith: [
       "all-natural-orange-juice-vase",
@@ -78,7 +78,7 @@ export const products: Product[] = [
     inStock: true,
     isBestSeller: true,
     shortDescription:
-      "Who’s calling? Style is on the line—a rotary phone base with a pink receiver shade and flexible chrome neck.",
+      "Who’s calling? Style is on the line with a rotary phone base, a pink receiver shade, and a flexible chrome neck.",
     description:
       "Kitsch-chic lighting at its best. Cream mid-century phone body, bubblegum pink handset as the shade, warm glow from the earpiece. Adjustable gooseneck for your desk, nightstand, or the corner that needs a conversation starter.",
     images: [img("hotline-rotary-desk-lamp.png")],
@@ -99,7 +99,7 @@ export const products: Product[] = [
     inStock: true,
     isNew: true,
     shortDescription:
-      "Gable-top ceramic carton vibes—pop-art orange graphics and a glossy cream finish.",
+      "Gable-top ceramic carton vibes. Pop-art orange graphics and a glossy cream finish.",
     description:
       "A tall ceramic vase shaped like a vintage juice carton: bold orange circle, “ALL NATURAL” ribbon typography, and green stripe details. Fill with bright stems or let it stand alone as surreal kitchen-counter art.",
     images: [img("all-natural-orange-juice-vase.png")],
@@ -119,9 +119,9 @@ export const products: Product[] = [
     limited: false,
     inStock: true,
     shortDescription:
-      "Hand-painted metal VW Beetle—tissues through the roof, hippie patchwork and smiley included.",
+      "Hand-painted metal VW Beetle. Tissues through the roof, hippie patchwork and smiley included.",
     description:
-      "Functional sculpture with serious personality. Lime, orange, pink, and forest panels; peace signs, daisies, and polka dots. White-wall wheels and a tissue slot in the roof—retro toy energy for the bathroom or console.",
+      "Functional sculpture with serious personality. Lime, orange, pink, and forest panels; peace signs, daisies, and polka dots. White-wall wheels and a tissue slot in the roof. Retro toy energy for the bathroom or console.",
     images: [img("peace-love-beetle-tissue-holder.png")],
     looksGreatWith: [
       "hotline-rotary-desk-lamp",
@@ -141,7 +141,7 @@ export const products: Product[] = [
     shortDescription:
       "Buttery yellow cowboy boot ceramic, daisy print, and a bouquet-ready opening at the shaft.",
     description:
-      "High-shine glaze, chocolate sole, and scattered white daisies on the shaft—Western kitsch meets florist fantasy. Sized for a generous stem arrangement or solo as a shelf statement.",
+      "High-shine glaze, chocolate sole, and scattered white daisies on the shaft. Western kitsch meets florist fantasy. Sized for a generous stem arrangement or solo as a shelf statement.",
     images: [img("giddy-up-daisy-boot-vase.png")],
     looksGreatWith: [
       "all-natural-orange-juice-vase",
@@ -159,7 +159,7 @@ export const products: Product[] = [
     limited: true,
     inStock: true,
     shortDescription:
-      "Our house bag—marquee logo, psychedelic waves, mushroom, zebra gussets, and hot pink handles.",
+      "Our house bag with marquee logo, psychedelic waves, mushroom, zebra gussets, and hot pink handles.",
     description:
       "Heavy paper boutique tote with silver grommets and cord handles. Maximalist pattern clash on purpose: marquee MAISON RETRO, surreal mushroom, wavy stripes, and polka-dot liner peek. Carry the moodboard home.",
     images: [img("maison-retro-maximalist-bag.png")],
@@ -182,9 +182,9 @@ export const products: Product[] = [
     isNew: true,
     isBestSeller: true,
     shortDescription:
-      "Retro spa glam—mask, cucumber eyes, pink rollers, pearls, and an open crown for blooms.",
+      "Retro spa glam with mask, cucumber eyes, pink rollers, pearls, and an open crown for blooms.",
     description:
-      "Glossy ceramic bust vase: mint face mask, fuchsia lips, striped spa robe collar, and oversized pink rollers. String of pearls at the neck. Plant ranunculus, roses, or dried stems from the top—limited-run collectible energy.",
+      "Glossy ceramic bust vase: mint face mask, fuchsia lips, striped spa robe collar, and oversized pink rollers. String of pearls at the neck. Plant ranunculus, roses, or dried stems from the top. Limited-run collectible energy.",
     images: [img("day-off-ceramic-bust-vase.png")],
     looksGreatWith: [
       "lumi-pal-buddy-lamps",

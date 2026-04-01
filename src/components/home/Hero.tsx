@@ -81,7 +81,7 @@ export function Hero() {
           >
             <span className="h-px w-10 shrink-0 bg-tangerine sm:w-14" aria-hidden />
             <p className="text-[10px] font-semibold uppercase tracking-[0.38em] text-ink-muted sm:text-[11px]">
-              Vol. 01 — Spring edit · maisonretro.shop
+              Vol. 01, spring edit. maisonretro.shop
             </p>
           </motion.div>
 
@@ -107,7 +107,7 @@ export function Hero() {
               Retro-inspired decor for homes that refuse the beige default.
             </p>
             <p className="text-sm leading-relaxed text-ink-muted sm:text-base">
-              Limited finds · Unique designs · Objects that start conversations.
+              Limited finds. Unique designs. Objects that start conversations.
             </p>
           </motion.div>
 

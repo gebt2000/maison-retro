@@ -17,7 +17,7 @@ export default function ContactPage() {
         We’re here to help
       </h1>
       <p className="mt-4 text-base text-ink-muted">
-        Questions about an order, a piece, or a collaboration? Send a note—we
+        Questions about an order, a piece, or a collaboration? Send a note. We
         read everything.
       </p>
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
               hello@maisonretro.shop
             </a>
           </li>
-          <li>Hours: Mon–Fri, 9am–5pm ET</li>
+          <li>Hours: Mon to Fri, 9am to 5pm ET</li>
           <li>Typical reply within one business day</li>
         </ul>
       </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
         </Button>
         {sent && (
           <p className="text-sm text-ink-muted">
-            Thanks—this demo doesn’t send email yet. Wire your API or form
+            Thanks. This demo doesn’t send email yet. Wire your API or form
             handler when you launch.
           </p>
         )}
@@ -96,7 +96,7 @@ export default function ContactPage() {
       <div className="mt-16 rounded-2xl bg-cream-dark/50 p-6">
         <h2 className="font-display text-lg font-semibold text-ink">FAQ</h2>
         <p className="mt-2 text-sm text-ink-muted">
-          Shipping, returns, and product care—full FAQ coming soon. For now,
+          Shipping, returns, and product care. Full FAQ coming soon. For now,
           reach out and we’ll answer fast.
         </p>
         <Link

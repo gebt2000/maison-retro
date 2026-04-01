@@ -48,7 +48,7 @@ body {
   position: relative;
 }
 
-/* Subtle paper grain — boutique / editorial */
+/* Subtle paper grain, boutique / editorial */
 body::before {
   content: "";
   position: fixed;

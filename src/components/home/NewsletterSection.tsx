@@ -26,8 +26,8 @@ export function NewsletterSection() {
               <span className="italic text-cherry">new arrivals.</span>
             </h2>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-ink-muted">
-              Short notes, no spam—drops, color stories, and styling ideas in
-              your inbox.
+              Short notes, no spam. Drops, color stories, and styling ideas in your
+              inbox.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export function NewsletterSection() {
               </div>
               {sent && (
                 <p className="mt-4 text-xs text-ink-muted">
-                  Thanks—demo form; connect your ESP when you launch.
+                  Thanks. This is a demo form. Connect your ESP when you launch.
                 </p>
               )}
             </form>

@@ -106,7 +106,7 @@ export function Footer() {
         <div className="mt-16 flex flex-col gap-4 border-t border-[var(--border-soft)] pt-10 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Maison Retro. All rights reserved.</p>
           <p className="max-w-md leading-relaxed">
-            Secure checkout · Easy returns · Designed for standout spaces
+            Secure checkout. Easy returns. Designed for standout spaces.
           </p>
         </div>
       </div>

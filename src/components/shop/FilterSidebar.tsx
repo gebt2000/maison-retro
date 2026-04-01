@@ -21,8 +21,8 @@ type Props = {
 
 const PRICE_OPTIONS = [
   { id: "under-50", label: "Under $50", min: 0, max: 50 },
-  { id: "50-100", label: "$50 – $100", min: 50, max: 100 },
-  { id: "100-150", label: "$100 – $150", min: 100, max: 150 },
+  { id: "50-100", label: "$50 to $100", min: 50, max: 100 },
+  { id: "100-150", label: "$100 to $150", min: 100, max: 150 },
   { id: "150-plus", label: "$150+", min: 150, max: 99999 },
 ] as const;
 

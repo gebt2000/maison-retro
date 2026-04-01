@@ -21,7 +21,7 @@ export default function WishlistPage() {
         Wishlist
       </h1>
       <p className="mt-2 max-w-lg text-sm text-ink-muted">
-        Saved pieces for later—your personal shortlist of color and charm.
+        Saved pieces for later. Your personal shortlist of color and charm.
       </p>
 
       {saved.length === 0 ? (

@@ -51,7 +51,7 @@ function BrandBagButton({
       )}
       aria-label={
         cartCount > 0
-          ? `Open your bag — ${cartCount} items`
+          ? `Open your bag, ${cartCount} items`
           : "Open your shopping bag"
       }
     >
@@ -139,7 +139,7 @@ export function InteractiveBrandBag({ placement }: { placement: Placement }) {
   );
 }
 
-/** Fixed floating bag — opens cart; tilt + marquee glow on hover. */
+/** Fixed floating bag: opens cart; tilt + marquee glow on hover. */
 export function FloatingBrandBag() {
   return <InteractiveBrandBag placement="floating" />;
 }

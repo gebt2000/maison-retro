@@ -53,7 +53,7 @@ export function BrandLogoLink({
         "inline-flex shrink-0 items-center rounded-lg ring-black/5 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tangerine",
         className,
       )}
-      aria-label="Maison Retro — Home"
+      aria-label="Maison Retro home"
     >
       <BrandLogo variant={variant} priority={priority} />
     </Link>

@@ -16,7 +16,7 @@ export function ProductGrid({
   if (products.length === 0) {
     return (
       <p className="rounded-3xl border border-dashed border-[var(--border-soft)] bg-surface/80 py-20 text-center text-sm text-ink-muted">
-        No pieces match those filters—try widening your search.
+        No pieces match those filters. Try widening your search.
       </p>
     );
   }

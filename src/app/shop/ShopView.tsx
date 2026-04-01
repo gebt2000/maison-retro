@@ -199,7 +199,7 @@ export function ShopView() {
               <span className="italic text-tangerine">shop.</span>
             </h1>
             <p className="mt-5 max-w-md text-base leading-relaxed text-ink-muted">
-              Collectible decor—curated, colorful, and anything but basic.
+              Collectible decor, curated, colorful, and anything but basic.
             </p>
           </div>
           <SortDropdown

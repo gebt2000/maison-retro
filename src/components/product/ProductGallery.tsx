@@ -59,7 +59,7 @@ export function ProductGallery({ images, productName }: Props) {
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 z-[95] bg-ink/85 backdrop-blur-sm" />
           <Dialog.Content className="fixed left-1/2 top-1/2 z-[96] max-h-[90vh] w-[min(100vw-2rem,900px)] -translate-x-1/2 -translate-y-1/2 outline-none">
-            <Dialog.Title className="sr-only">{productName} — enlarged</Dialog.Title>
+            <Dialog.Title className="sr-only">{productName} enlarged</Dialog.Title>
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-cream-dark">
               <Image
                 src={images[active]}

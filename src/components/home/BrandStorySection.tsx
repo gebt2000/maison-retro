@@ -36,7 +36,7 @@ export function BrandStorySection() {
             </h2>
             <p className="mt-8 text-base leading-relaxed text-ink-muted">
               We curate playful retro-inspired pieces for homes with personality.
-              Color, charm, and conversation starters—without the clutter of a
+              Color, charm, and conversation starters without the clutter of a
               generic big-box shop.
             </p>
             <ul className="mt-10 space-y-4 text-sm leading-relaxed text-ink-muted">
@@ -44,7 +44,7 @@ export function BrandStorySection() {
                 Small-batch and limited runs, refreshed often.
               </li>
               <li className="flex gap-4 border-l-2 border-blush/60 pl-5">
-                Editorial presentation—every piece is photo-ready.
+                Editorial presentation so every piece is photo-ready.
               </li>
               <li className="flex gap-4 border-l-2 border-mint/50 pl-5">
                 Delivery &amp; packaging that feels considered.
@@ -69,7 +69,7 @@ export function BrandStorySection() {
                 <span className="italic text-tangerine">A lot wonderful.</span>
               </p>
               <p className="mt-6 max-w-xs text-sm text-ink-muted sm:mt-0">
-                Design pieces with charm, color, and attitude—for shelves that
+                Design pieces with charm, color, and attitude for shelves that
                 refuse to whisper.
               </p>
             </motion.div>
@@ -99,7 +99,7 @@ export function BrandStorySection() {
                 touch of the unexpected.
               </p>
               <span className="mt-6 font-display text-lg italic text-ink/40">
-                — The edit
+                The edit
               </span>
             </motion.div>
           </div>

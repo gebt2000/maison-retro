@@ -115,7 +115,7 @@ export function ProductDetailClient({ product, looksGreat }: Props) {
           </div>
 
           <p className="mt-6 text-sm text-ink-muted">
-            Ships within 2–4 business days. Free shipping over $120. Easy returns
+            Ships within 2 to 4 business days. Free shipping over $120. Easy returns
             within 30 days.
           </p>
 
@@ -184,7 +184,7 @@ export function ProductDetailClient({ product, looksGreat }: Props) {
               <Accordion.Content className="overflow-hidden">
                 <div className="pb-4 text-sm leading-relaxed text-ink-muted">
                   Wipe with a soft cloth. Avoid harsh solvents. Indoor use
-                  recommended. Each piece may show subtle handmade variation—by
+                  recommended. Each piece may show subtle handmade variation by
                   design.
                 </div>
               </Accordion.Content>
@@ -219,12 +219,12 @@ export function ProductDetailClient({ product, looksGreat }: Props) {
             </p>
             <div className="mt-4 space-y-3 text-sm text-ink-muted">
               <p>
-                <span className="font-medium text-ink">Maya</span> — “Feels like
-                a gallery find. Instant conversation starter.”
+                <span className="font-medium text-ink">Maya:</span>{" "}
+                “Feels like a gallery find. Instant conversation starter.”
               </p>
               <p>
-                <span className="font-medium text-ink">Jordan</span> — “Quality
-                is there. Packaging was gorgeous.”
+                <span className="font-medium text-ink">Jordan:</span>{" "}
+                “Quality is there. Packaging was gorgeous.”
               </p>
             </div>
           </section>

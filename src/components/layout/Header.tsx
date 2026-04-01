@@ -192,7 +192,7 @@ export function Header() {
                   href="/"
                   className="inline-flex min-w-0 items-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tangerine"
                   onClick={() => setMobileOpen(false)}
-                  aria-label="Maison Retro — Home"
+                  aria-label="Maison Retro home"
                 >
                   <BrandLogo variant="drawer" />
                 </Link>

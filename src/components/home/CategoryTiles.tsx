@@ -42,7 +42,7 @@ export function CategoryTiles() {
               <span className="italic text-tangerine">category.</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-ink-muted">
-              Lamps, vases, tabletop moments—each edit chosen for color, charm,
+              Lamps, vases, tabletop moments. Each edit chosen for color, charm,
               and attitude.
             </p>
           </motion.div>

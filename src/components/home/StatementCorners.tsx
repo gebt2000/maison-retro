@@ -42,7 +42,7 @@ export function StatementCorners() {
             <span className="italic text-cherry/90">every corner.</span>
           </h2>
           <p className="mt-5 max-w-xl text-base text-ink-muted">
-            Boutique presentation, editorial spacing—pieces that read like a
+            Boutique presentation and editorial spacing. Pieces that read like a
             lookbook, not a catalog spread.
           </p>
         </motion.div>
