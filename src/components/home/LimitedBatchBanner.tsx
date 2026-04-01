@@ -9,7 +9,7 @@ export function LimitedBatchBanner() {
     <section className="relative overflow-hidden border-b border-[var(--border-soft)] bg-ink py-[clamp(3.5rem,8vw,5.5rem)] text-cream">
       <p
         aria-hidden
-        className="pointer-events-none absolute -left-4 bottom-0 select-none font-display text-[clamp(5rem,18vw,11rem)] font-medium leading-none tracking-tight text-cream/[0.07]"
+        className="pointer-events-none absolute bottom-0 left-[var(--section-pad-x)] select-none font-display text-[clamp(2.75rem,14vw,11rem)] font-medium leading-none tracking-tight text-cream/[0.07] sm:text-[clamp(4rem,16vw,11rem)]"
       >
         LIMITED
       </p>

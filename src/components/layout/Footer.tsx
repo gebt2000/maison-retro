@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="relative mt-24 overflow-hidden border-t border-[var(--border-soft)] bg-cream-dark/70">
       <p
         aria-hidden
-        className="pointer-events-none absolute -bottom-8 right-0 select-none font-display text-[clamp(4rem,15vw,10rem)] font-medium leading-none tracking-tighter text-ink/[0.06]"
+        className="pointer-events-none absolute -bottom-8 right-0 translate-x-6 select-none font-display text-[clamp(4rem,15vw,10rem)] font-medium leading-none tracking-tighter text-ink/[0.06] sm:translate-x-10"
       >
         Retro
       </p>

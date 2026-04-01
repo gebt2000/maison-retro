@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${playfair.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="font-sans min-h-full flex flex-col bg-cream text-ink">
+      <body className="font-sans flex min-h-full min-w-0 flex-col overflow-x-hidden bg-cream text-ink">
         <Providers>
           <SiteShell>{children}</SiteShell>
         </Providers>

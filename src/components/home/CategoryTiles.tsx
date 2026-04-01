@@ -20,7 +20,7 @@ const HERO_SLUGS = new Set(["lamps", "limited-pieces"]);
 
 export function CategoryTiles() {
   return (
-    <section className="relative border-b border-[var(--border-soft)] bg-surface py-[var(--section-pad-y)]">
+    <section className="relative overflow-x-hidden border-b border-[var(--border-soft)] bg-surface py-[var(--section-pad-y)]">
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-1/2 h-[120%] w-[45%] -translate-y-1/2 translate-x-1/4 bg-gradient-to-l from-blush/12 to-transparent blur-3xl"
