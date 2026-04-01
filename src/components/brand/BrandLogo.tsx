@@ -13,9 +13,10 @@ type BrandLogoProps = {
 
 const variantClass: Record<NonNullable<BrandLogoProps["variant"]>, string> = {
   header:
-    "h-9 w-auto max-w-[min(52vw,200px)] sm:h-10 sm:max-w-[220px] md:h-[2.65rem] md:max-w-[240px]",
-  footer: "h-12 w-auto max-w-[220px] sm:h-14 sm:max-w-[260px]",
-  drawer: "h-8 w-auto max-w-[160px]",
+    "h-12 w-auto max-w-[min(72vw,300px)] sm:h-14 sm:max-w-[320px] md:h-16 md:max-w-[360px] lg:h-[4.5rem] lg:max-w-[400px]",
+  footer:
+    "h-14 w-auto max-w-[280px] sm:h-16 sm:max-w-[340px] lg:h-[4.75rem] lg:max-w-[420px]",
+  drawer: "h-10 w-auto max-w-[200px] sm:h-11 sm:max-w-[220px]",
 };
 
 export function BrandLogo({
@@ -35,7 +36,7 @@ export function BrandLogo({
         variantClass[variant],
         className,
       )}
-      sizes="(max-width: 640px) 52vw, 240px"
+      sizes="(max-width: 640px) 72vw, (max-width: 1024px) 320px, 400px"
     />
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { products } from "@/lib/products";
 import { Hero } from "@/components/home/Hero";
+import { MarqueeStrip } from "@/components/home/MarqueeStrip";
 import { CategoryTiles } from "@/components/home/CategoryTiles";
 import { FeaturedCollection } from "@/components/home/FeaturedCollection";
 import { StatementCorners } from "@/components/home/StatementCorners";
@@ -58,6 +59,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <MarqueeStrip />
       <FeaturedCollection
         id="new-arrivals"
         title="New arrivals"
@@ -66,6 +68,7 @@ export default function HomePage() {
         href="/shop?filter=new"
         ctaLabel="Shop new"
         tone="surface"
+        layout="editorial"
       />
       <FeaturedCollection
         id="best-sellers"
@@ -75,6 +78,7 @@ export default function HomePage() {
         href="/shop?filter=bestseller"
         ctaLabel="See best sellers"
         tone="cream"
+        layout="editorial"
       />
       <CategoryTiles />
       <StatementCorners />

@@ -20,7 +20,7 @@ export function AnnouncementBar() {
 
   return (
     <div className="relative z-[60] overflow-hidden border-b border-[var(--border-soft)] bg-ink text-cream">
-      <div className="mx-auto flex h-10 max-w-[1400px] items-center justify-center px-4 text-center text-xs font-medium tracking-wide sm:text-[13px]">
+      <div className="mx-auto flex h-10 max-w-[1600px] items-center justify-center px-[var(--section-pad-x)] text-center text-[11px] font-semibold tracking-[0.22em] sm:text-xs">
         <AnimatePresence mode="wait">
           <motion.p
             key={i}

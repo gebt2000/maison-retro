@@ -44,8 +44,8 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-[var(--border-soft)] bg-cream/90 backdrop-blur-md">
-        <div className="mx-auto flex h-[4.25rem] max-w-[1400px] items-center gap-4 px-4 sm:px-6 lg:px-10">
+      <header className="sticky top-0 z-50 border-b border-[var(--border-soft)] bg-cream/80 backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-cream/70">
+        <div className="mx-auto flex min-h-[4.75rem] max-w-[1600px] items-center gap-4 px-[var(--section-pad-x)] py-2 sm:min-h-[5.5rem] sm:py-2.5">
           <button
             type="button"
             className="flex h-11 w-11 items-center justify-center rounded-full text-ink lg:hidden"
@@ -61,20 +61,29 @@ export function Header() {
             className="ml-4 hidden flex-1 items-center gap-1 lg:flex"
             aria-label="Main"
           >
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "rounded-full px-3 py-2 text-sm font-medium text-ink-muted transition-colors hover:text-ink",
-                  pathname === item.href.split("?")[0] &&
-                    !item.href.includes("?") &&
-                    "text-ink",
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV.map((item) => {
+              const active =
+                pathname === item.href.split("?")[0] &&
+                !item.href.includes("?");
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "group relative px-3 py-2 text-[13px] font-medium tracking-wide transition-colors",
+                    active ? "text-ink" : "text-ink-muted hover:text-ink",
+                  )}
+                >
+                  {item.label}
+                  <span
+                    className={cn(
+                      "absolute bottom-1 left-3 right-3 h-[2px] origin-left rounded-full bg-tangerine transition-transform duration-300 ease-out",
+                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
+                    )}
+                  />
+                </Link>
+              );
+            })}
             <div
               className="relative"
               onMouseEnter={() => setCatOpen(true)}
@@ -178,7 +187,7 @@ export function Header() {
               transition={{ type: "spring", damping: 28, stiffness: 320 }}
               className="relative flex h-full w-[min(100%,20rem)] flex-col bg-cream shadow-[var(--shadow-lift)]"
             >
-              <div className="flex h-[4.25rem] items-center justify-between gap-3 border-b border-[var(--border-soft)] px-4">
+              <div className="flex min-h-[4.75rem] items-center justify-between gap-3 border-b border-[var(--border-soft)] px-4 py-2">
                 <Link
                   href="/"
                   className="inline-flex min-w-0 items-center rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tangerine"

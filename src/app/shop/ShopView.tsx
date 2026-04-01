@@ -136,7 +136,7 @@ export function ShopView() {
   };
 
   return (
-    <div className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6 lg:flex lg:gap-12 lg:px-10 lg:py-14">
+    <div className="mx-auto max-w-[1600px] px-[var(--section-pad-x)] py-12 lg:flex lg:gap-14 lg:py-[var(--section-pad-y)]">
       <div className="mb-8 flex items-center justify-between lg:hidden">
         <p className="text-sm text-ink-muted">
           {filtered.length} piece{filtered.length !== 1 ? "s" : ""}
@@ -158,7 +158,7 @@ export function ShopView() {
           mobileFilters ? "block" : "hidden",
         )}
       >
-        <div className="lg:sticky lg:top-28 lg:w-64 lg:shrink-0">
+        <div className="lg:sticky lg:top-36 lg:w-64 lg:shrink-0">
           <FilterSidebar
             category={category}
             colors={colors}
@@ -189,14 +189,17 @@ export function ShopView() {
       </div>
 
       <div className="min-w-0 flex-1">
-        <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h1 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-              Shop
+            <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-ink-muted">
+              Collection
+            </p>
+            <h1 className="mt-3 font-display text-[clamp(2.5rem,5vw,4rem)] font-medium leading-[1.02] tracking-[-0.03em] text-ink">
+              The{" "}
+              <span className="italic text-tangerine">shop.</span>
             </h1>
-            <p className="mt-2 max-w-xl text-sm text-ink-muted">
-              Collectible decor objects—curated, colorful, and anything but
-              basic.
+            <p className="mt-5 max-w-md text-base leading-relaxed text-ink-muted">
+              Collectible decor—curated, colorful, and anything but basic.
             </p>
           </div>
           <SortDropdown

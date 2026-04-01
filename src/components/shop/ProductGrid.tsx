@@ -1,12 +1,17 @@
+import { cn } from "@/lib/utils";
 import type { Product } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
 
 export function ProductGrid({
   products,
   startIndex = 0,
+  gapClass,
+  className,
 }: {
   products: Product[];
   startIndex?: number;
+  gapClass?: string;
+  className?: string;
 }) {
   if (products.length === 0) {
     return (
@@ -16,7 +21,13 @@ export function ProductGrid({
     );
   }
   return (
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-10 xl:grid-cols-3">
+    <div
+      className={cn(
+        "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3",
+        gapClass ?? "gap-8 lg:gap-10",
+        className,
+      )}
+    >
       {products.map((p, i) => (
         <ProductCard key={p.slug} product={p} index={startIndex + i} />
       ))}

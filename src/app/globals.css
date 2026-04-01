@@ -14,8 +14,10 @@
   --lavender: #c4b5e0;
   --white: #fdfcfa;
   --border-soft: rgba(28, 26, 23, 0.08);
-  --shadow-card: 0 18px 50px -24px rgba(28, 26, 23, 0.18);
-  --shadow-lift: 0 28px 60px -28px rgba(28, 26, 23, 0.22);
+  --shadow-card: 0 22px 56px -28px rgba(28, 26, 23, 0.2);
+  --shadow-lift: 0 36px 72px -32px rgba(28, 26, 23, 0.26);
+  --section-pad-y: clamp(4.5rem, 10vw, 8rem);
+  --section-pad-x: clamp(1.25rem, 4vw, 2.75rem);
 }
 
 @theme inline {
@@ -32,7 +34,7 @@
   --color-lavender: var(--lavender);
   --color-surface: var(--white);
   --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-playfair);
 }
 
 html {
@@ -43,6 +45,18 @@ body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-dm-sans), system-ui, sans-serif;
+  position: relative;
+}
+
+/* Subtle paper grain — boutique / editorial */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection {
@@ -50,13 +64,11 @@ body {
   color: var(--ink);
 }
 
-/* Focus visible for accessibility */
 :focus-visible {
   outline: 2px solid var(--tangerine);
   outline-offset: 2px;
 }
 
-/* Marquee-style glow on brand shopping bag (hover / focus) */
 @keyframes bag-marquee-glow {
   0%,
   100% {
@@ -73,7 +85,23 @@ body {
   animation: bag-marquee-glow 1.35s ease-in-out infinite;
 }
 
-/* Reduce motion */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-scroll {
+  animation: marquee-scroll 52s linear infinite;
+}
+
+.animate-marquee-scroll-reverse {
+  animation: marquee-scroll 58s linear infinite reverse;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -83,7 +111,9 @@ body {
     transition-duration: 0.01ms !important;
   }
 
-  .animate-bag-marquee-glow {
+  .animate-bag-marquee-glow,
+  .animate-marquee-scroll,
+  .animate-marquee-scroll-reverse {
     animation: none !important;
   }
 }

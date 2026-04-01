@@ -33,8 +33,8 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
     >
       <div
         className={cn(
-          "relative overflow-hidden rounded-[1.75rem] border border-[var(--border-soft)] bg-surface shadow-[var(--shadow-card)] transition-all duration-500",
-          "hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]",
+          "relative overflow-hidden rounded-[1.75rem] border border-[var(--border-soft)] bg-surface shadow-[var(--shadow-card)] transition-all duration-500 ease-out",
+          "hover:-translate-y-[6px] hover:border-ink/[0.07] hover:shadow-[var(--shadow-lift)]",
         )}
       >
         <div className="absolute left-4 top-4 z-10 flex flex-wrap gap-2">
@@ -73,6 +73,12 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
 
         <Link href={`/product/${product.slug}`} className="block">
           <div className="relative aspect-[4/5] overflow-hidden bg-cream-dark">
+            <span
+              className="absolute bottom-4 left-4 z-10 font-display text-3xl font-medium tabular-nums text-cream/25 transition-colors duration-500 group-hover:text-cream/50"
+              aria-hidden
+            >
+              {String(index + 1).padStart(2, "0")}
+            </span>
             <Image
               src={product.images[0]}
               alt={product.name}
@@ -89,12 +95,12 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             {CATEGORY_LABELS[product.category]}
           </p>
           <Link href={`/product/${product.slug}`}>
-            <h3 className="mt-1 font-display text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-tangerine">
+            <h3 className="mt-1 font-display text-lg font-medium leading-snug tracking-tight text-ink transition-colors group-hover:text-tangerine">
               {product.name}
             </h3>
           </Link>
           <div className="mt-2 flex flex-wrap items-baseline gap-2">
-            <span className="font-medium tabular-nums text-ink">
+            <span className="font-display text-lg font-medium tabular-nums tracking-tight text-ink">
               {formatPrice(product.price)}
             </span>
             {product.compareAtPrice != null && (
